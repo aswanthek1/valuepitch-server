@@ -13,9 +13,7 @@ const server = http.createServer(app);
 const connectDB = require("./config/db");
 
 app.use(
-  cors({
-    origin: "http://localhost:3000",
-  })
+  cors()
 );
 app.use(logger("dev"));
 app.use(express.json());

@@ -10,7 +10,7 @@ const userSchema = mongoose.Schema({
         required:true
     },
     dob:{
-        type:Date,
+        type:String,
         required:true,
     },
     country:{
@@ -21,6 +21,10 @@ const userSchema = mongoose.Schema({
         type:String,
         required:true
     },
+    visibility:{
+        type:Boolean,
+        default:true
+    }
 },{timestamps:true})
 
 module.exports = mongoose.model('users',userSchema);
